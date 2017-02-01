@@ -21,7 +21,12 @@
     "babel-plugin-transform-export-extensions": "^6.8.0",
     "babel-plugin-transform-object-rest-spread": "^6.20.2",
     "babel-polyfill": "^6.3.14",
-    "babel-preset-latest": "^6.16.0"
+    "babel-preset-latest": "^6.16.0",
+    "eslint": "^3.14.1",
+    "eslint-config-google": "^0.7.1"
   },
-  "dependencies": {}
+  "dependencies": {
+    "dotenv": "^4.0.0",
+    "request": "^2.79.0"
+  }
 }

@@ -1,5 +1,5 @@
 import Test from 'ava';
 
-Test('works', t => {
-  t.truthy({});
+Test(`default`, t => {
+  t.truthy(true);
 });

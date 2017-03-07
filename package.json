@@ -26,6 +26,9 @@
     "eslint-config-google": "^0.7.1"
   },
   "dependencies": {
+    "async": "^2.1.5",
+    "babel-preset-pundits": "^2.0.3",
+    "babel-register": "^6.23.0",
     "dotenv": "^4.0.0",
     "request": "^2.79.0"
   }

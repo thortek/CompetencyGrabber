@@ -1,1 +1,3 @@
-module.exports = require('./dist');
+require('babel-polyfill');
+require('babel-register');
+module.exports = require('./src');

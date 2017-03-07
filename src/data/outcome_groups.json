@@ -1,0 +1,315 @@
+[
+  {
+    "id": 41,
+    "title": "Angular 2",
+    "vendor_guid": null,
+    "url": "/api/v1/courses/4/outcome_groups/41",
+    "subgroups_url": "/api/v1/courses/4/outcome_groups/41/subgroups",
+    "outcomes_url": "/api/v1/courses/4/outcome_groups/41/outcomes",
+    "can_edit": true
+  },
+  {
+    "id": 43,
+    "title": "Automated Testing",
+    "vendor_guid": null,
+    "url": "/api/v1/courses/4/outcome_groups/43",
+    "subgroups_url": "/api/v1/courses/4/outcome_groups/43/subgroups",
+    "outcomes_url": "/api/v1/courses/4/outcome_groups/43/outcomes",
+    "can_edit": true
+  },
+  {
+    "id": 42,
+    "title": "Basic Operating System",
+    "vendor_guid": null,
+    "url": "/api/v1/courses/4/outcome_groups/42",
+    "subgroups_url": "/api/v1/courses/4/outcome_groups/42/subgroups",
+    "outcomes_url": "/api/v1/courses/4/outcome_groups/42/outcomes",
+    "can_edit": true
+  },
+  {
+    "id": 58,
+    "title": "Complete Full Stack Web App",
+    "vendor_guid": null,
+    "url": "/api/v1/courses/4/outcome_groups/58",
+    "subgroups_url": "/api/v1/courses/4/outcome_groups/58/subgroups",
+    "outcomes_url": "/api/v1/courses/4/outcome_groups/58/outcomes",
+    "can_edit": true
+  },
+  {
+    "id": 45,
+    "title": "CSS",
+    "vendor_guid": null,
+    "url": "/api/v1/courses/4/outcome_groups/45",
+    "subgroups_url": "/api/v1/courses/4/outcome_groups/45/subgroups",
+    "outcomes_url": "/api/v1/courses/4/outcome_groups/45/outcomes",
+    "can_edit": true
+  },
+  {
+    "id": 69,
+    "title": "Deployment and Hosting",
+    "vendor_guid": null,
+    "url": "/api/v1/courses/4/outcome_groups/69",
+    "subgroups_url": "/api/v1/courses/4/outcome_groups/69/subgroups",
+    "outcomes_url": "/api/v1/courses/4/outcome_groups/69/outcomes",
+    "can_edit": true
+  },
+  {
+    "id": 47,
+    "title": "Express",
+    "vendor_guid": null,
+    "url": "/api/v1/courses/4/outcome_groups/47",
+    "subgroups_url": "/api/v1/courses/4/outcome_groups/47/subgroups",
+    "outcomes_url": "/api/v1/courses/4/outcome_groups/47/outcomes",
+    "can_edit": true
+  },
+  {
+    "id": 68,
+    "title": "HTML5",
+    "vendor_guid": null,
+    "url": "/api/v1/courses/4/outcome_groups/68",
+    "subgroups_url": "/api/v1/courses/4/outcome_groups/68/subgroups",
+    "outcomes_url": "/api/v1/courses/4/outcome_groups/68/outcomes",
+    "can_edit": true
+  },
+  {
+    "id": 59,
+    "title": "IDE or Text Editor",
+    "vendor_guid": null,
+    "url": "/api/v1/courses/4/outcome_groups/59",
+    "subgroups_url": "/api/v1/courses/4/outcome_groups/59/subgroups",
+    "outcomes_url": "/api/v1/courses/4/outcome_groups/59/outcomes",
+    "can_edit": true
+  },
+  {
+    "id": 40,
+    "title": "JavaScript",
+    "vendor_guid": null,
+    "url": "/api/v1/courses/4/outcome_groups/40",
+    "subgroups_url": "/api/v1/courses/4/outcome_groups/40/subgroups",
+    "outcomes_url": "/api/v1/courses/4/outcome_groups/40/outcomes",
+    "can_edit": true
+  }
+]
+
+[
+  {
+    "id": 90,
+    "title": "Deployment and Hosting",
+    "vendor_guid": null,
+    "url": "/api/v1/courses/5/outcome_groups/90",
+    "subgroups_url": "/api/v1/courses/5/outcome_groups/90/subgroups",
+    "outcomes_url": "/api/v1/courses/5/outcome_groups/90/outcomes",
+    "can_edit": true,
+    "import_url": "/api/v1/courses/5/outcome_groups/90/import",
+    "parent_outcome_group": {
+      "id": 75,
+      "title": "Full Stack Web Full-Time",
+      "vendor_guid": null,
+      "url": "/api/v1/courses/5/outcome_groups/75",
+      "subgroups_url": "/api/v1/courses/5/outcome_groups/75/subgroups",
+      "outcomes_url": "/api/v1/courses/5/outcome_groups/75/outcomes",
+      "can_edit": true
+    },
+    "context_id": 5,
+    "context_type": "Course",
+    "description": null
+  },
+  {
+    "id": 89,
+    "title": "HTML5",
+    "vendor_guid": null,
+    "url": "/api/v1/courses/5/outcome_groups/89",
+    "subgroups_url": "/api/v1/courses/5/outcome_groups/89/subgroups",
+    "outcomes_url": "/api/v1/courses/5/outcome_groups/89/outcomes",
+    "can_edit": true,
+    "import_url": "/api/v1/courses/5/outcome_groups/89/import",
+    "parent_outcome_group": {
+      "id": 75,
+      "title": "Full Stack Web Full-Time",
+      "vendor_guid": null,
+      "url": "/api/v1/courses/5/outcome_groups/75",
+      "subgroups_url": "/api/v1/courses/5/outcome_groups/75/subgroups",
+      "outcomes_url": "/api/v1/courses/5/outcome_groups/75/outcomes",
+      "can_edit": true
+    },
+    "context_id": 5,
+    "context_type": "Course",
+    "description": null
+  },
+  {
+    "id": 88,
+    "title": "Modules and Build Tools",
+    "vendor_guid": null,
+    "url": "/api/v1/courses/5/outcome_groups/88",
+    "subgroups_url": "/api/v1/courses/5/outcome_groups/88/subgroups",
+    "outcomes_url": "/api/v1/courses/5/outcome_groups/88/outcomes",
+    "can_edit": true,
+    "import_url": "/api/v1/courses/5/outcome_groups/88/import",
+    "parent_outcome_group": {
+      "id": 75,
+      "title": "Full Stack Web Full-Time",
+      "vendor_guid": null,
+      "url": "/api/v1/courses/5/outcome_groups/75",
+      "subgroups_url": "/api/v1/courses/5/outcome_groups/75/subgroups",
+      "outcomes_url": "/api/v1/courses/5/outcome_groups/75/outcomes",
+      "can_edit": true
+    },
+    "context_id": 5,
+    "context_type": "Course",
+    "description": null
+  },
+  {
+    "id": 87,
+    "title": "Troubleshooting and Debugging",
+    "vendor_guid": null,
+    "url": "/api/v1/courses/5/outcome_groups/87",
+    "subgroups_url": "/api/v1/courses/5/outcome_groups/87/subgroups",
+    "outcomes_url": "/api/v1/courses/5/outcome_groups/87/outcomes",
+    "can_edit": true,
+    "import_url": "/api/v1/courses/5/outcome_groups/87/import",
+    "parent_outcome_group": {
+      "id": 75,
+      "title": "Full Stack Web Full-Time",
+      "vendor_guid": null,
+      "url": "/api/v1/courses/5/outcome_groups/75",
+      "subgroups_url": "/api/v1/courses/5/outcome_groups/75/subgroups",
+      "outcomes_url": "/api/v1/courses/5/outcome_groups/75/outcomes",
+      "can_edit": true
+    },
+    "context_id": 5,
+    "context_type": "Course",
+    "description": null
+  },
+  {
+    "id": 86,
+    "title": "IDE or Text Editor",
+    "vendor_guid": null,
+    "url": "/api/v1/courses/5/outcome_groups/86",
+    "subgroups_url": "/api/v1/courses/5/outcome_groups/86/subgroups",
+    "outcomes_url": "/api/v1/courses/5/outcome_groups/86/outcomes",
+    "can_edit": true,
+    "import_url": "/api/v1/courses/5/outcome_groups/86/import",
+    "parent_outcome_group": {
+      "id": 75,
+      "title": "Full Stack Web Full-Time",
+      "vendor_guid": null,
+      "url": "/api/v1/courses/5/outcome_groups/75",
+      "subgroups_url": "/api/v1/courses/5/outcome_groups/75/subgroups",
+      "outcomes_url": "/api/v1/courses/5/outcome_groups/75/outcomes",
+      "can_edit": true
+    },
+    "context_id": 5,
+    "context_type": "Course",
+    "description": null
+  },
+  {
+    "id": 85,
+    "title": "Complete Full Stack Web App",
+    "vendor_guid": null,
+    "url": "/api/v1/courses/5/outcome_groups/85",
+    "subgroups_url": "/api/v1/courses/5/outcome_groups/85/subgroups",
+    "outcomes_url": "/api/v1/courses/5/outcome_groups/85/outcomes",
+    "can_edit": true,
+    "import_url": "/api/v1/courses/5/outcome_groups/85/import",
+    "parent_outcome_group": {
+      "id": 75,
+      "title": "Full Stack Web Full-Time",
+      "vendor_guid": null,
+      "url": "/api/v1/courses/5/outcome_groups/75",
+      "subgroups_url": "/api/v1/courses/5/outcome_groups/75/subgroups",
+      "outcomes_url": "/api/v1/courses/5/outcome_groups/75/outcomes",
+      "can_edit": true
+    },
+    "context_id": 5,
+    "context_type": "Course",
+    "description": null
+  },
+  {
+    "id": 84,
+    "title": "Source Version Control",
+    "vendor_guid": null,
+    "url": "/api/v1/courses/5/outcome_groups/84",
+    "subgroups_url": "/api/v1/courses/5/outcome_groups/84/subgroups",
+    "outcomes_url": "/api/v1/courses/5/outcome_groups/84/outcomes",
+    "can_edit": true,
+    "import_url": "/api/v1/courses/5/outcome_groups/84/import",
+    "parent_outcome_group": {
+      "id": 75,
+      "title": "Full Stack Web Full-Time",
+      "vendor_guid": null,
+      "url": "/api/v1/courses/5/outcome_groups/75",
+      "subgroups_url": "/api/v1/courses/5/outcome_groups/75/subgroups",
+      "outcomes_url": "/api/v1/courses/5/outcome_groups/75/outcomes",
+      "can_edit": true
+    },
+    "context_id": 5,
+    "context_type": "Course",
+    "description": null
+  },
+  {
+    "id": 83,
+    "title": "NodeJS",
+    "vendor_guid": null,
+    "url": "/api/v1/courses/5/outcome_groups/83",
+    "subgroups_url": "/api/v1/courses/5/outcome_groups/83/subgroups",
+    "outcomes_url": "/api/v1/courses/5/outcome_groups/83/outcomes",
+    "can_edit": true,
+    "import_url": "/api/v1/courses/5/outcome_groups/83/import",
+    "parent_outcome_group": {
+      "id": 75,
+      "title": "Full Stack Web Full-Time",
+      "vendor_guid": null,
+      "url": "/api/v1/courses/5/outcome_groups/75",
+      "subgroups_url": "/api/v1/courses/5/outcome_groups/75/subgroups",
+      "outcomes_url": "/api/v1/courses/5/outcome_groups/75/outcomes",
+      "can_edit": true
+    },
+    "context_id": 5,
+    "context_type": "Course",
+    "description": null
+  },
+  {
+    "id": 82,
+    "title": "MongoDB",
+    "vendor_guid": null,
+    "url": "/api/v1/courses/5/outcome_groups/82",
+    "subgroups_url": "/api/v1/courses/5/outcome_groups/82/subgroups",
+    "outcomes_url": "/api/v1/courses/5/outcome_groups/82/outcomes",
+    "can_edit": true,
+    "import_url": "/api/v1/courses/5/outcome_groups/82/import",
+    "parent_outcome_group": {
+      "id": 75,
+      "title": "Full Stack Web Full-Time",
+      "vendor_guid": null,
+      "url": "/api/v1/courses/5/outcome_groups/75",
+      "subgroups_url": "/api/v1/courses/5/outcome_groups/75/subgroups",
+      "outcomes_url": "/api/v1/courses/5/outcome_groups/75/outcomes",
+      "can_edit": true
+    },
+    "context_id": 5,
+    "context_type": "Course",
+    "description": null
+  },
+  {
+    "id": 81,
+    "title": "Express",
+    "vendor_guid": null,
+    "url": "/api/v1/courses/5/outcome_groups/81",
+    "subgroups_url": "/api/v1/courses/5/outcome_groups/81/subgroups",
+    "outcomes_url": "/api/v1/courses/5/outcome_groups/81/outcomes",
+    "can_edit": true,
+    "import_url": "/api/v1/courses/5/outcome_groups/81/import",
+    "parent_outcome_group": {
+      "id": 75,
+      "title": "Full Stack Web Full-Time",
+      "vendor_guid": null,
+      "url": "/api/v1/courses/5/outcome_groups/75",
+      "subgroups_url": "/api/v1/courses/5/outcome_groups/75/subgroups",
+      "outcomes_url": "/api/v1/courses/5/outcome_groups/75/outcomes",
+      "can_edit": true
+    },
+    "context_id": 5,
+    "context_type": "Course",
+    "description": null
+  }
+]

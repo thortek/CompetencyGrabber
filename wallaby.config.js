@@ -11,7 +11,10 @@ module.exports = wallaby => ({
 
   env: {
     type: 'node',
-    runner: 'node'
+    runner: 'node',
+    params: {
+      env: 'CANVAS_API_KEY=123'
+    }
   },
 
   testFramework: 'ava',

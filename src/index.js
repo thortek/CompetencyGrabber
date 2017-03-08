@@ -1,8 +1,11 @@
-
 const Request = require('request');
 const fs = require('fs');
 const async = require('async');
 const dotenv = require('dotenv');
+
+import Path from 'path';
+import Files from './infrastructure/files';
+import Requests from './infrastructure/request';
 
 //import dotenv from 'dotenv';
 dotenv.load();
@@ -78,18 +81,18 @@ function getFullStackCompetencyGroups() {
 function getGroupCompetencies() {
   // const getGroupCompetencies = new Promise(function(resolve, reject) {
   let allCompetencies = [];
-  let groupArray = new Promise(function(resolve, reject) {
-  
-  fs.readFile(`${__dirname}/data/fullStackCompetencyGroups.json`, (err, data) => {
-    if (err) {
-      reject(Error(err.message));
-    }
-    //console.log(JSON.parse(data));
-    resolve(JSON.parse(data));
-  });
-  }).then(function(result) {
+  let groupArray = new Promise(function (resolve, reject) {
+
+    fs.readFile(`${__dirname}/data/fullStackCompetencyGroups.json`, (err, data) => {
+      if (err) {
+        reject(Error(err.message));
+      }
+      //console.log(JSON.parse(data));
+      resolve(JSON.parse(data));
+    });
+  }).then(function (result) {
     console.log(result);
-  }, function(err) {
+  }, function (err) {
     console.log(err);
   });
   //console.log(groupArray);
@@ -119,3 +122,11 @@ function getGroupCompetencies() {
 
 //getFullStackCompetencyGroups();
 getGroupCompetencies();
+
+const GROUP_COMPETENCIES_PATH = Path.join(__dirname, `/data/fullStackCompetencyGroups.json`);
+const groupCompetencies = async (path) => (await Files.load(path)).map(group => `https://lms.heliotraining.com${group.outcomes_url}?per_page=100`);
+
+const COMPETENCIES_PATH = Path.join(__dirname, `/data/competencies.json`);
+const allCompetencies = async (groups = []) => await Requests.getAll(groups);
+const saveCompetencies = async (path, competencies) => await Files.save(path, competencies);
+

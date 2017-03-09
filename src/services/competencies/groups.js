@@ -3,7 +3,7 @@ import Files from '../common/files';
 
 const RELATIVE_PATH = './data/groups.json';
 
-const getPath = async(dirname, relativePath) => Path.join(dirname, relativePath);
+const getPath = async(directory, relativePath) => Path.join(directory, relativePath);
 
 
 // { id: 20,
@@ -18,7 +18,6 @@ const getPath = async(dirname, relativePath) => Path.join(dirname, relativePath)
 export default {
 
   async all() {
-
     const path = await getPath(__dirname, RELATIVE_PATH);
     return (await Files.load(path)).map(group => (
       {

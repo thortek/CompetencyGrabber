@@ -122,11 +122,11 @@ function getGroupCompetencies() {
 
 //getFullStackCompetencyGroups();
 getGroupCompetencies();
-
-const GROUP_COMPETENCIES_PATH = Path.join(__dirname, `/data/fullStackCompetencyGroups.json`);
-const groupCompetencies = async (path) => (await Files.load(path)).map(group => `https://lms.heliotraining.com${group.outcomes_url}?per_page=100`);
-
-const COMPETENCIES_PATH = Path.join(__dirname, `/data/competencies.json`);
-const allCompetencies = async (groups = []) => await Requests.getAll(groups);
-const saveCompetencies = async (path, competencies) => await Files.save(path, competencies);
+//
+// const GROUP_COMPETENCIES_PATH = Path.join(__dirname, `/data/fullStackCompetencyGroups.json`);
+// const groupCompetencies = async (path) => (await Files.load(path)).map(group => `https://lms.heliotraining.com${group.outcomes_url}?per_page=100`);
+//
+// const COMPETENCIES_PATH = Path.join(__dirname, `/data/competencies.json`);
+// const allCompetencies = async (groups = []) => await Requests.getAll(groups);
+// const saveCompetencies = async (path, competencies) => await Files.save(path, competencies);
 

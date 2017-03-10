@@ -5,8 +5,6 @@ const dotenv = require('dotenv');
 
 import Services from './services';
 
-
-
 //import dotenv from 'dotenv';
 dotenv.load();
 

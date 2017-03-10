@@ -1,5 +1,8 @@
 import Fetch from 'node-fetch';
 import Boom from 'boom';
+import dotenv from 'dotenv';
+
+dotenv.load();
 
 const CANVAS_API_KEY = process.env.CANVAS_API_KEY || '';
 const DEFAULT_OPTIONS = { headers: { authorization: CANVAS_API_KEY } };
@@ -22,6 +25,7 @@ const fetch = async(uri, method = 'GET', options = {}) => {
 export default {
 
   async get(uri, options) {
+    console.log(uri);
     return await fetch(uri, 'GET', options);
   },
 

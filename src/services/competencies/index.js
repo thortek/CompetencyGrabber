@@ -3,5 +3,5 @@ import outcomes from './outcomes';
 
 export default {
   groups,
-  outcomes
+  outcomes,
 };

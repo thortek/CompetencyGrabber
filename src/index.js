@@ -3,9 +3,9 @@ const fs = require('fs');
 const async = require('async');
 const dotenv = require('dotenv');
 
-import Path from 'path';
-import Files from './infrastructure/files';
-import Requests from './infrastructure/request';
+import Services from './services';
+
+
 
 //import dotenv from 'dotenv';
 dotenv.load();
@@ -121,8 +121,8 @@ function getGroupCompetencies() {
 }
 
 //getFullStackCompetencyGroups();
-getGroupCompetencies();
-//
+// getGroupCompetencies();
+
 // const GROUP_COMPETENCIES_PATH = Path.join(__dirname, `/data/fullStackCompetencyGroups.json`);
 // const groupCompetencies = async (path) => (await Files.load(path)).map(group => `https://lms.heliotraining.com${group.outcomes_url}?per_page=100`);
 //
@@ -130,3 +130,14 @@ getGroupCompetencies();
 // const allCompetencies = async (groups = []) => await Requests.getAll(groups);
 // const saveCompetencies = async (path, competencies) => await Files.save(path, competencies);
 
+
+const run = async () => {
+  const competencies = await Services.competencies.outcomes.all();
+  console.log(competencies);
+};
+
+
+
+run()
+  .then(() => console.log('finished'))
+  .catch(err => console.log(err));

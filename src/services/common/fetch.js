@@ -25,7 +25,6 @@ const fetch = async(uri, method = 'GET', options = {}) => {
 export default {
 
   async get(uri, options) {
-    console.log(uri);
     return await fetch(uri, 'GET', options);
   },
 

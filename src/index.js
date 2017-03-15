@@ -4,6 +4,12 @@ const async = require('async');
 const dotenv = require('dotenv');
 
 import Services from './services';
+import Files from './services/common/files';
+import Path from 'path';
+
+const RELATIVE_PATH = './services/competencies/data/competencies.json';
+
+const getPath = async(directory, relativePath) => Path.join(directory, relativePath);
 
 //import dotenv from 'dotenv';
 dotenv.load();
@@ -130,8 +136,14 @@ function getGroupCompetencies() {
 
 
 const run = async () => {
-  const competencies = await Services.competencies.outcomes.all();
-  console.log(competencies);
+  //const outcome_groups = await Services.competencies.outcomes.all();
+  //console.log(await Services.competencies.outcomes.all());
+  const path = await getPath(__dirname, RELATIVE_PATH);
+
+  Files.save(path, await Services.competencies.outcomes.all(), (err) => {
+    if (err) throw err;
+    console.log('File is saved!');
+  });
 };
 
 

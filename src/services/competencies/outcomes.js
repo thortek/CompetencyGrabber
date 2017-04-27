@@ -17,7 +17,7 @@ export default {
         outcomes.push(JSON.stringify(outcome));
       }
       catch (ex) {
-        console.error(ex.message);
+        console.error(`Competency ${i}: ex.message`);
       }
     }
     return await outcomes;

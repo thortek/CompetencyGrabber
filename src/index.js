@@ -11,6 +11,8 @@ dotenv.load();
 
 const COMPETENCY_PATH = './services/competencies/data/allCompetencies.json';
 const ASSIGNMENT_PATH = './services/competencies/data/allAssignments.json';
+const ASSESSMENT_PATH = './services/competencies/data/allAssessments.json';
+const USERS_PATH = './services/competencies/data/allUsers.json';
 const getPath = async (directory, relativePath) => Path.join(directory, relativePath);
 
 const writeCompetencies = async () => {
@@ -29,10 +31,34 @@ const writeAssignments = async () => {
   });
 };
 
+const writeAssessments = async () => {
+  const path = await getPath(__dirname, ASSESSMENT_PATH);
+  Files.save(path, await Services.competencies.assessments.all(), (err) => {
+    if (err) throw err;
+    console.log(`Assessments are saved to file ${ASSESSMENT_PATH}`);
+  });
+};
+
+const writeUsers = async () => {
+  const path = await getPath(__dirname, USERS_PATH);
+  Files.save(path, await Services.competencies.users.all(), (err) => {
+    if (err) throw err;
+    console.log(`Users are saved to file ${USERS_PATH}`);
+  });
+};
+
 // writeCompetencies()
 //   .then(() => console.log('Writing out all Canvas competencies to file is finished'))
 //   .catch(err => console.log(err));
 
-writeAssignments()
-  .then(() => console.log('Writing out all Canvas assignments to file is finished'))
+// writeAssignments()
+//   .then(() => console.log('Writing out all Canvas assignments to file is finished'))
+//   .catch(err => console.log(err));
+
+writeAssessments()
+  .then(() => console.log('Writing out all Canvas assessments to file is finished'))
+  .catch(err => console.log(err));
+
+writeUsers()
+  .then(() => console.log('Writing out all Canvas users to file is finished'))
   .catch(err => console.log(err));

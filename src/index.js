@@ -56,21 +56,21 @@ const writeGrades = async () => {
   });
 };
 
-// writeCompetencies()
-//   .then(() => console.log('Writing out all Canvas competencies to file is finished'))
-//   .catch(err => console.log(err));
+writeCompetencies()
+  .then(() => console.log('Writing out all Canvas competencies to file is finished'))
+  .catch(err => console.log(err));
 
-// writeAssignments()
-//   .then(() => console.log('Writing out all Canvas assignments to file is finished'))
-//   .catch(err => console.log(err));
+writeAssignments()
+  .then(() => console.log('Writing out all Canvas assignments to file is finished'))
+  .catch(err => console.log(err));
 
-// writeAssessments()
-//   .then(() => console.log('Writing out all Canvas assessments to file is finished'))
-//   .catch(err => console.log(err));
+writeAssessments()
+  .then(() => console.log('Writing out all Canvas assessments to file is finished'))
+  .catch(err => console.log(err));
 
-// writeUsers()
-//   .then(() => console.log('Writing out all Canvas users to file is finished'))
-//   .catch(err => console.log(err));
+writeUsers()
+  .then(() => console.log('Writing out all Canvas users to file is finished'))
+  .catch(err => console.log(err));
 
 writeGrades()
   .then(() => console.log('Writing out all Canvas grade historys to file is finished'))

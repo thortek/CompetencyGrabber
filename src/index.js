@@ -13,6 +13,7 @@ const COMPETENCY_PATH = './services/competencies/data/allCompetencies.json';
 const ASSIGNMENT_PATH = './services/competencies/data/allAssignments.json';
 const ASSESSMENT_PATH = './services/competencies/data/allAssessments.json';
 const USERS_PATH = './services/competencies/data/allUsers.json';
+const GRADES_PATH = './services/competencies/data/allGrades.json';
 const getPath = async (directory, relativePath) => Path.join(directory, relativePath);
 
 const writeCompetencies = async () => {
@@ -47,6 +48,14 @@ const writeUsers = async () => {
   });
 };
 
+const writeGrades = async () => {
+  const path = await getPath(__dirname, GRADES_PATH);
+  Files.save(path, await Services.competencies.grades.all(), (err) => {
+    if (err) throw err;
+    console.log(`Grades are saved to file ${GRADES_PATH}`);
+  });
+};
+
 // writeCompetencies()
 //   .then(() => console.log('Writing out all Canvas competencies to file is finished'))
 //   .catch(err => console.log(err));
@@ -55,10 +64,14 @@ const writeUsers = async () => {
 //   .then(() => console.log('Writing out all Canvas assignments to file is finished'))
 //   .catch(err => console.log(err));
 
-writeAssessments()
-  .then(() => console.log('Writing out all Canvas assessments to file is finished'))
-  .catch(err => console.log(err));
+// writeAssessments()
+//   .then(() => console.log('Writing out all Canvas assessments to file is finished'))
+//   .catch(err => console.log(err));
 
-writeUsers()
-  .then(() => console.log('Writing out all Canvas users to file is finished'))
+// writeUsers()
+//   .then(() => console.log('Writing out all Canvas users to file is finished'))
+//   .catch(err => console.log(err));
+
+writeGrades()
+  .then(() => console.log('Writing out all Canvas grade historys to file is finished'))
   .catch(err => console.log(err));

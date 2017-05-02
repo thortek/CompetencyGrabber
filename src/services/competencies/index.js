@@ -3,6 +3,7 @@ import outcomes from './outcomes';
 import assignments from './assignments';
 import assessments from './assessments';
 import users from './users';
+import grades from './gradehistory';
 
 export default {
   groups,
@@ -10,4 +11,5 @@ export default {
   assignments,
   assessments,
   users,
+  grades,
 };

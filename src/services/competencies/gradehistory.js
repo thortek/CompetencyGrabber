@@ -3,7 +3,7 @@ import Fetch from '../common/fetch';
 export default {
 
   async all() {
-    const courseIds = [1,4,5,7];
+    const courseIds = [1,4,5,7,8,10];
     let grades = [];
     for (let course of courseIds) {
       console.log(`Fetching grades for course id=${course}`);

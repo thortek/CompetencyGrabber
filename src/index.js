@@ -7,6 +7,8 @@ import Services from './services';
 import Files from './services/common/files';
 import Path from 'path';
 
+import CompQL from './services/graphql/import-competencies';
+
 dotenv.load();
 
 const COMPETENCY_PATH = './services/competencies/data/allCompetencies.json';
@@ -56,22 +58,63 @@ const writeGrades = async () => {
   });
 };
 
-writeCompetencies()
-  .then(() => console.log('Writing out all Canvas competencies to file is finished'))
-  .catch(err => console.log(err));
+// writeCompetencies()
+//   .then(() => console.log('Writing out all Canvas competencies to file is finished'))
+//   .catch(err => console.log(err));
 
-writeAssignments()
-  .then(() => console.log('Writing out all Canvas assignments to file is finished'))
-  .catch(err => console.log(err));
+// writeAssignments()
+//   .then(() => console.log('Writing out all Canvas assignments to file is finished'))
+//   .catch(err => console.log(err));
 
-writeAssessments()
-  .then(() => console.log('Writing out all Canvas assessments to file is finished'))
-  .catch(err => console.log(err));
+// writeAssessments()
+//   .then(() => console.log('Writing out all Canvas assessments to file is finished'))
+//   .catch(err => console.log(err));
 
-writeUsers()
-  .then(() => console.log('Writing out all Canvas users to file is finished'))
-  .catch(err => console.log(err));
+// writeUsers()
+//   .then(() => console.log('Writing out all Canvas users to file is finished'))
+//   .catch(err => console.log(err));
 
-writeGrades()
-  .then(() => console.log('Writing out all Canvas grade historys to file is finished'))
-  .catch(err => console.log(err));
+// writeGrades()
+//   .then(() => console.log('Writing out all Canvas grade historys to file is finished'))
+//   .catch(err => console.log(err));
+
+
+import Lokka from 'lokka';
+import Transport from 'lokka-transport-http';
+
+const rawCompetencies = require('./services/competencies/data/allCompetencies.json');
+
+const client = new Lokka({
+  transport: new Transport('https://api.graph.cool/simple/v1/cj3dui2aa1gjd0197zk5b3lgc')
+})
+
+const createCompetency = async(comp) => {
+  const mutation = `($name: String!, $description: String) {
+   createCompetency(
+      name: $name
+      description: $description
+      ) {
+          id
+          name
+        }
+  }`
+
+let mutateVars = {
+    name: comp.title,
+    description: comp.description
+  }
+
+  return await client.mutate(mutation, mutateVars);
+}
+
+const createCompetencies = async(rawCompetencies) => {
+  return await Promise.all(rawCompetencies.map(createCompetency))
+}
+
+const main = async() => {
+  // create competencies
+  const competencyIds = await createCompetencies(rawCompetencies)
+  console.log(`Created ${competencyIds.length} competencies`)
+}
+
+main().catch((e) => console.error(e))

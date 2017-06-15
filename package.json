@@ -37,6 +37,8 @@
     "babel-register": "^6.23.0",
     "boom": "^4.2.0",
     "dotenv": "^4.0.0",
+    "lokka": "^1.7.0",
+    "lokka-transport-http": "^1.6.1",
     "node-fetch": "^1.6.3",
     "request": "^2.79.0"
   }

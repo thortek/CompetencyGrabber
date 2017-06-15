@@ -1,41 +1,34 @@
-const {Lokka} = require('lokka')
-const {Transport} = require('lokka-transport-http')
+// const {Lokka} = require('lokka')
+// const {Transport} = require('lokka-transport-http')
 
-// set timezone to UTC (needed for Graphcool)
-process.env.TZ = 'UTC'
+// const rawCompetencies = require('../../../src/services/competencies/data/allCompetencies.json');
 
-const client = new Lokka({
-  transport: new Transport('https://api.graph.cool/simple/v1/cj3dui2aa1gjd0197zk5b3lgc')
-})
+// const client = new Lokka({
+//   transport: new Transport('https://api.graph.cool/simple/v1/cj3dui2aa1gjd0197zk5b3lgc')
+// })
 
-// convert to ISO 8601 format
-const convertToDateTimeString = (str) => new Date(Date.parse(str)).toISOString()
+// const createCompetency = async(competency) => {
+//   const result = await client.mutate(`{
+//     competency: createCompetency(
+//       description: "${competency.description}"
+//       name: "${competency.title}"
+//     ) {
+//       id
+//     }
+//   }`)
 
-const createMovie = async(movie) => {
-  const result = await client.mutate(`{
-    movie: createMovie(
-      oldId: "${movie.id}"
-      description: "${movie.description}"
-      released: "${convertToDateTimeString(movie.released)}"
-      title: "${movie.title}"
-    ) {
-      id
-    }
-  }`)
+//   return result.competency.id
+// }
 
-  return result.movie.id
-}
+// const createCompetencies = async(rawCompetencies) => {
+//   return await Promise.all(rawCompetencies.map(createCompetency))
+// }
 
-const createMovies = async(rawMovies) => {
-  return await Promise.all(rawMovies.map(createMovie))
-}
+// const main = async() => {
 
-const main = async() => {
-  const rawMovies = require('./movies.json')
+//   // create competencies
+//   const competencyIds = await createCompetencies(rawCompetencies)
+//   console.log(`Created ${competencyIds.length} competencies`)
+// }
 
-  // create movies
-  const movieIds = await createMovies(rawMovies)
-  console.log(`Created ${movieIds.length} movies`)
-}
-
-main().catch((e) => console.error(e))
+// main().catch((e) => console.error(e))
